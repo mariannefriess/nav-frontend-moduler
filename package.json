@@ -28,7 +28,9 @@
     "generateMDs": "node ./_scripts/generateReadmes.js",
     "start-guideline-app": "webpack-dev-server --hot --inline --config guideline-app/conf/webpack.dev.js",
     "build-guideline-app": "webpack --config guideline-app/conf/webpack.production.js",
-    "deploy-guideline-app": "npm run build-guideline-app && gh-pages -d guideline-app/dist"
+    "deploy-guideline-app": "npm run build-guideline-app && gh-pages -d guideline-app/dist",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "NAV",
   "license": "SEE LICENSE IN LICENSE",
@@ -134,6 +136,9 @@
     "jsx-to-string": "^1.1.0",
     "react-docgen": "^2.20.0",
     "react-docgen-typescript": "^1.2.1",
-    "react-document-title": "^2.0.3"
-  }
+    "react-document-title": "^2.0.3",
+    "react-scripts": "1.1.1",
+    "snyk": "^1.83.0"
+  },
+  "snyk": true
 }
