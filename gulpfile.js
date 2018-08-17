@@ -143,7 +143,9 @@ function parseTsAndAppendDocInfo(contents, file) {
 function buildTs() {
     const ignoreErrors = process.argv.indexOf('--ignoreErrors') !== -1;
 
-    const tsResult = gulp.src(tsScripts)
+    // tsScripts,
+    // const tsScripts = './packages/node_modules/*/src/**/*.ts*';
+    const tsResult = gulp.src(['./packages/node_modules/*/src/**/*.ts*'])
         .pipe(fixErrorHandling())
         .pipe(onlyNewFiles(mapToDest))
         .pipe(logCompiling())

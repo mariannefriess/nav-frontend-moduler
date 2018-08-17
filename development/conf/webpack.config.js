@@ -29,6 +29,14 @@ const GlobalWebpackConfig = {
                     { loader: 'file-loader' }
                 ]
             },
+	        {
+	            test: /\.tsx?$/,
+                loader: 'awesome-typescript-loader',
+		        include: [
+			        path.resolve(__dirname, './../app'),
+			        path.resolve(__dirname, './../../packages')
+		        ]
+            },
             {
                 test: /\.jsx?$/,
                 loader: 'babel-loader',
