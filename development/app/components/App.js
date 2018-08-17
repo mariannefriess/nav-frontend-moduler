@@ -44,13 +44,13 @@ export default class App extends Component {
                 <Fareknapp>Fareknapp</Fareknapp>
                 <Chevron />
                 <h3>Autcomplete komponent test</h3>
-                <br/>
-				<Autocomplete
-                    items={[{111:'Banan'}, {222:'Ananas'}, {333:'Jordbær'}]}
-                    value={this.state.value}
-                    placeholder="Velg frukt type"
-                    onSelect={(value, item) => this.onSelect(value, item)}
-                />
+	            <br/>
+	            <Autocomplete
+		            items={[{111:'Banan'}, {222:'Ananas'}, {333:'Jordbær'}]}
+		            value={this.state.value}
+		            placeholder="Velg frukt type"
+		            onSelect={(value, item) => this.onSelect(value, item)}
+	            />
             </div>
         );
     }
