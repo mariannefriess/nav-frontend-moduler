@@ -3,7 +3,7 @@ import { AlertStripeSuksess } from './../../../packages/node_modules/nav-fronten
 import { Hovedknapp, Fareknapp } from './../../../packages/node_modules/nav-frontend-knapper';
 import { EtikettInfo, EtikettAdvarsel } from './../../../packages/node_modules/nav-frontend-etiketter';
 import Chevron      from './../../../packages/node_modules/nav-frontend-chevron';
-import Autocomplete from './../../../packages/node_modules/nav-frontend-autocomplete';
+// import NavAutocomplete from './../../../packages/node_modules/nav-frontend-autocomplete';
 
 /*
  * Her er komponenten som benyttes til utvikling av eksisterende og nye moduler til nav-frontend.
@@ -21,6 +21,14 @@ import Autocomplete from './../../../packages/node_modules/nav-frontend-autocomp
  * Enjoy!
  */
 
+// class NavAutocomplete extends Component {
+//
+// 	render() {
+// 		return (
+// 			<div>Spike</div>
+// 		);
+// 	}
+// }
 
 // eslint-disable-next-line react/prefer-stateless-function
 export default class App extends Component {
@@ -36,7 +44,7 @@ export default class App extends Component {
     }
 
     render() {
-        console.warn("render value: " + this.state.value);
+        // console.warn("render value: " + this.state.value);
         return (
             <div>
                 <AlertStripeSuksess>Heisann Hoppsann!</AlertStripeSuksess>
@@ -45,12 +53,13 @@ export default class App extends Component {
                 <Chevron />
                 <h3>Autcomplete komponent test</h3>
 	            <br/>
-	            <Autocomplete
-		            items={[{111:'Banan'}, {222:'Ananas'}, {333:'Jordbær'}]}
-		            value={this.state.value}
-		            placeholder="Velg frukt type"
-		            onSelect={(value, item) => this.onSelect(value, item)}
-	            />
+	            <NavAutocomplete />
+	            {/*<Autocomplete*/}
+		            {/*items={[{111:'Banan'}, {222:'Ananas'}, {333:'Jordbær'}]}*/}
+		            {/*value={this.state.value}*/}
+		            {/*placeholder="Velg frukt type"*/}
+		            {/*onSelect={(value, item) => this.onSelect(value, item)}*/}
+	            {/*/>*/}
             </div>
         );
     }
